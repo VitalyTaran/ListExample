@@ -1,6 +1,6 @@
 iOS sample project for learning List in SwiftUI with infinite scroll
 
-screenshot
+![Image alt](https://github.com/VitalyTaran/ListExample/raw/main/screenshot.png)
 
 Specification
 
