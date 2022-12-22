@@ -8,14 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    var users = [
+        User(id: 100, name: "Bob", avatarUrl: ""),
+        User(id: 200, name: "Alice", avatarUrl: "")
+    ]
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            List {
+                ForEach(users, id: \.id) { user in
+                    UserRow(user: user)
+                }
+            }
+            .navigationTitle("GitHub Users")
+            .navigationBarTitleDisplayMode(.automatic)
         }
-        .padding()
     }
 }
 
